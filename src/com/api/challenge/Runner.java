@@ -51,6 +51,7 @@ public class Runner {
 		stepTwo();
 		stepThree();
 		stepFour();
+		stepSeven();
 		
 	}
 	
@@ -121,6 +122,12 @@ public class Runner {
 	
 	public static void stepFour() {
 		System.out.println(String.format("The manager has %d employees", manager.getEmployeeCount()));
+	}
+	
+	
+	public static void stepSeven() {
+		Employee e = manager.findEmployeeById(92);
+		System.out.println("Found employeed with ID:" + e.id + "; " + e.first + " " + e.last);
 	}
 	
 

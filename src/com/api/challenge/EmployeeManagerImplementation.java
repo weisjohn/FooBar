@@ -22,7 +22,11 @@ public class EmployeeManagerImplementation implements EmployeeManager {
 
 	@Override
 	public Employee findEmployeeById(int id) {
-		// TODO Auto-generated method stub
+		for (int i = 0; i < employees.size() - 1; i++) {
+			if (employees.get(i).id == id) {
+				return employees.get(i);
+			}
+		}
 		return null;
 	}
 
@@ -44,7 +48,11 @@ public class EmployeeManagerImplementation implements EmployeeManager {
 
 	@Override
 	public void removeEmployee(int id) {
-		// TODO Auto-generated method stub
+		for (int i = 0; i < employees.size() - 1; i++) {
+			if (employees.get(i).id == id) {
+				employees.remove(i);
+			}
+		}
 		
 	}
 
