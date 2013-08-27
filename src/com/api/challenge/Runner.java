@@ -11,6 +11,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import com.api.challenge.Employee;
+import com.api.challenge.EmployeeManager;
 
 public class Runner {
 	
@@ -26,6 +27,7 @@ public class Runner {
 		// verify a file was specified
 		if (args.length < 1) {
 			System.out.println("No file specified.");
+			// if we fail, bolt as fast as we can
 			System.exit(1);
 		}
 		
@@ -45,6 +47,10 @@ public class Runner {
 		
 		// delegate to parse and build
 		parseFile(path);
+		
+		stepTwo();
+		stepThree();
+		stepFour();
 		
 	}
 	
@@ -101,6 +107,21 @@ public class Runner {
 		return new Employee(str[0], str[1], str[2], id, d); 
 	}
 	
+	
+	
+	
+	public static void stepTwo() {
+		System.out.println(String.format("The manager has %d employees", manager.getEmployeeCount()));
+	}
+
+	public static void stepThree() {
+		System.out.println("Removing employee 29");
+		manager.removeEmployee(29);
+	}
+	
+	public static void stepFour() {
+		System.out.println(String.format("The manager has %d employees", manager.getEmployeeCount()));
+	}
 	
 
 }

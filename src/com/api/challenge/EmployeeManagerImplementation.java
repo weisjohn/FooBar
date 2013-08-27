@@ -3,6 +3,8 @@ package com.api.challenge;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.api.challenge.Employee;
+
 public class EmployeeManagerImplementation implements EmployeeManager {
 
 	public List<Employee> employees;
@@ -26,8 +28,7 @@ public class EmployeeManagerImplementation implements EmployeeManager {
 
 	@Override
 	public int getEmployeeCount() {
-		// TODO Auto-generated method stub
-		return 0;
+		return employees.size();
 	}
 
 	@Override
@@ -38,8 +39,7 @@ public class EmployeeManagerImplementation implements EmployeeManager {
 
 	@Override
 	public void addEmployee(Employee employee) {
-		// TODO Auto-generated method stub
-		
+		employees.add(employee);
 	}
 
 	@Override
